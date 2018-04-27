@@ -1,7 +1,11 @@
 <div class="container">
   <div class="row">
     <div class="col text-center">
-      <h1>Hello World!</h1>
+      <h1>
+          {{title}} 
+          <span *ngIf="containBadWords()" class="badge badge-danger">Bad words!</span></h1>
+      <input type="text" [(ngModel)]="title">
+      <button class="btn btn-primary" (click)="changeTitle()">Change title</button>
     </div>
   </div>
 </div>

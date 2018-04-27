@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'Hello Angular 204!';
+
+  containBadWords() {
+    return this.title.toLowerCase().indexOf("bad") > -1;
+  }
+
+  changeTitle() {
+    this.title = "Another title";
+  }
 }
