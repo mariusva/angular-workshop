@@ -1,7 +1,7 @@
 <div class="card mb-4 box-shadow">
-  <img class="card-img-top" [src]="product.imageSrc" appZoomImage>
+  <img class="card-img-top" [src]="product.imageSrc">
   <div class="card-body">
-    <h5>{{product.title | shortText:32}}</h5>
+    <h5>{{product.title | shortText:32}} <span class="badge badge-info float-right">{{product.category}}</span></h5>
     <p class="card-text">{{product.description | shortText:128 | badwords}}</p>
     <span class="price">{{product.price | currency:'EUR'}}</span>
     <div class="d-flex justify-content-between align-items-center">

@@ -11,6 +11,7 @@ import { ProductItemComponent } from './product-item/product-item.component';
 import { BadwordsPipe } from './badwords.pipe';
 import { ZoomImageDirective } from './zoom-image.directive';
 import { LikesComponent } from './likes/likes.component';
+import { TagFilterComponent } from './tag-filter/tag-filter.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { LikesComponent } from './likes/likes.component';
     ShortTextPipe,
     BadwordsPipe,
     ZoomImageDirective,
-    LikesComponent
+    LikesComponent,
+    TagFilterComponent
   ],
   imports: [
     BrowserModule,
