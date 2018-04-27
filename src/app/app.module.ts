@@ -3,15 +3,21 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
+import { ShortTextPipe } from "./short-text.pipe";
 
 import { AppComponent } from './app.component';
 import { ProductsListComponent } from './products-list/products-list.component';
+import { ProductItemComponent } from './product-item/product-item.component';
+import { BadwordsPipe } from './badwords.pipe';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductsListComponent
+    ProductsListComponent,
+    ProductItemComponent,
+    ShortTextPipe,
+    BadwordsPipe
   ],
   imports: [
     BrowserModule,

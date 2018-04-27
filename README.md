@@ -1,7 +1,13 @@
 # Angular Workshop
 
-## Step2
-- Create a list component and display a simple list of products
-- Use the product list blocking, hard coded
-- use *ngFor with index and display the index
-- use *ngIf to display a message if there are more than X products
+## Step3
+- Create a product model
+- Create a component for a product item
+  - Create the component manually
+  - Import the necessary definitions
+  - Specify the component on the NgModule
+- Show the @Input parameter
+- specify the @HostBinding('class') className: string = 'col-md-4';
+- create shortText pipe
+- create badwords pipe
+- display product price and use the currency pipe from Angular
