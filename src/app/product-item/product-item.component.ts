@@ -16,4 +16,11 @@ export class ProductItemComponent implements OnInit {
   ngOnInit() {
   }
 
+  onToggleLike(evt) {
+    if(!evt) {
+      return this.product.likesNo --;
+    }
+    return this.product.likesNo ++;
+  }
+
 }

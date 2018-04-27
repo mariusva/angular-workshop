@@ -10,6 +10,7 @@ import { ProductsListComponent } from './products-list/products-list.component';
 import { ProductItemComponent } from './product-item/product-item.component';
 import { BadwordsPipe } from './badwords.pipe';
 import { ZoomImageDirective } from './zoom-image.directive';
+import { LikesComponent } from './likes/likes.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { ZoomImageDirective } from './zoom-image.directive';
     ProductItemComponent,
     ShortTextPipe,
     BadwordsPipe,
-    ZoomImageDirective
+    ZoomImageDirective,
+    LikesComponent
   ],
   imports: [
     BrowserModule,

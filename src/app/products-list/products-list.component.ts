@@ -31,7 +31,7 @@ export class ProductsListComponent implements OnInit {
       "imageSrc": "http://via.placeholder.com/350x250",
       "description": "but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with",
       "likesNo": 32,
-      "liked": true,
+      "liked": false,
       "commentsNo": 12
     },{
       "id": 1420,
