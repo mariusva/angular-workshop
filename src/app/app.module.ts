@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { ProductsListComponent } from './products-list/products-list.component';
 import { ProductItemComponent } from './product-item/product-item.component';
 import { BadwordsPipe } from './badwords.pipe';
+import { ZoomImageDirective } from './zoom-image.directive';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { BadwordsPipe } from './badwords.pipe';
     ProductsListComponent,
     ProductItemComponent,
     ShortTextPipe,
-    BadwordsPipe
+    BadwordsPipe,
+    ZoomImageDirective
   ],
   imports: [
     BrowserModule,
