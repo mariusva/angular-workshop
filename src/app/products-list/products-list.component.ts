@@ -10,7 +10,7 @@ import { map } from 'rxjs/operators';
 })
 export class ProductsListComponent implements OnInit {
 
-  products;
+  products = [];
 
   constructor(private http: HttpClient) { }
 
