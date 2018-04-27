@@ -26,6 +26,6 @@ export class ZoomImageDirective {
     this.el.nativeElement.style['transition'] = 'transition: transform 1s;';
     this.el.nativeElement.style['transform'] = 'scale(1)';
     this.el.nativeElement.style['border'] = 'none';
-    this.el.nativeElement.style['z-index'] = 9999;
+    this.el.nativeElement.style['z-index'] = 100;
   }
 }
