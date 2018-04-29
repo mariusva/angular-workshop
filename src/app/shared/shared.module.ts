@@ -10,6 +10,10 @@ import { LikesComponent } from "./likes/likes.component";
 @NgModule({
   imports:[CommonModule],
   declarations: [TagFilterComponent, BadwordsPipe, ShortTextPipe, ZoomImageDirective, TagFilterComponent, LikesComponent],
-  exports:[TagFilterComponent, BadwordsPipe, ShortTextPipe, ZoomImageDirective, TagFilterComponent, LikesComponent]
+  exports:[TagFilterComponent, BadwordsPipe, ShortTextPipe, ZoomImageDirective, TagFilterComponent, LikesComponent],
+  providers:[{
+    provide: 'API_URI',
+    useValue: 'http://localhost:3000'
+  }]
 })
 export class SharedModule {}
