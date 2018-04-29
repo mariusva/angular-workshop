@@ -1,4 +1,4 @@
 # Angular Workshop
 
-## Step12 - Product edit resolver
-- Add a resolver for product edit route
+## Step13 - Basic Template driven form for product
+- template driven form for product edit
