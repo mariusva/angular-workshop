@@ -9,11 +9,13 @@ import { ProductItemComponent } from './product-item/product-item.component';
 import { ProductsService } from './products.service';
 import { ProductsRoutingModule } from './products-routing.module';
 import { DetailsComponent } from './details/details.component';
+import { EditComponent } from './edit/edit.component';
+import { CanActivateEditGuard } from './can-activate-edit.guard';
 
 @NgModule({
   imports: [CommonModule, HttpClientModule, SharedModule, ProductsRoutingModule],
-  declarations: [ProductsListComponent, ProductItemComponent, DetailsComponent],
+  declarations: [ProductsListComponent, ProductItemComponent, DetailsComponent, EditComponent],
   exports: [ProductsListComponent],
-  providers: [ProductsService]
+  providers: [ProductsService, CanActivateEditGuard]
 })
 export class ProductsModule {}
