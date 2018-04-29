@@ -13,12 +13,15 @@ export class ProductsListComponent implements OnInit {
 
   products = [];
   selectedTag: string = "";
+  errorMessage: string = "";
 
   constructor(private carsService: CarsService) { }
 
   ngOnInit() {
     this.carsService.getProducts()
-      .subscribe(data => this.products = data)
+      .subscribe(
+        data => this.products = data,
+        err => this.errorMessage = err)
   }
 
   filterTagChanged(selectedTag: string) {

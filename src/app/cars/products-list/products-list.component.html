@@ -1,6 +1,7 @@
 <div class="row">
   <div class="w-100">
-    <div class="col">
+    <div class="alert alert-danger" *ngIf="errorMessage">Something serious happened on our other end :-(</div>
+    <div class="col" *ngIf="!errorMessage">
       <app-tag-filter [products]="products" (tagSelected)="filterTagChanged($event)"></app-tag-filter>
     </div>
   </div>
