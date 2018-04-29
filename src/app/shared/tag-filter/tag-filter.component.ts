@@ -1,5 +1,4 @@
 import { Component, Input, OnChanges, Output, EventEmitter } from '@angular/core';
-import { Product } from "./../product.model";
 
 @Component({
   selector: 'app-tag-filter',
@@ -8,7 +7,7 @@ import { Product } from "./../product.model";
 })
 export class TagFilterComponent implements OnChanges {
 
-  @Input() products: Product[] = [];
+  @Input() products = [];
   @Output() tagSelected: EventEmitter<string> = new EventEmitter();
 
   tags: string[] = [];
