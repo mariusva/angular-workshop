@@ -4,6 +4,7 @@ import { ProductsListComponent } from "./products-list/products-list.component";
 import { DetailsComponent } from "../products/details/details.component";
 import { EditComponent } from "./edit/edit.component";
 import { CanActivateEditGuard } from "./can-activate-edit.guard";
+import { ProductsEditResolver } from "./products-edit.resolver";
 
 const ProductsRoutes: Routes = [
   {
@@ -18,6 +19,7 @@ const ProductsRoutes: Routes = [
   {
     path: 'products/:id/edit',
     component: EditComponent,
+    resolve: { product: ProductsEditResolver },
     canActivate: [CanActivateEditGuard]
   }
 ];
