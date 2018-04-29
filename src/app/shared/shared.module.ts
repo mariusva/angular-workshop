@@ -6,10 +6,11 @@ import { BadwordsPipe } from './badwords.pipe';
 import { ShortTextPipe } from "./short-text.pipe";
 import { ZoomImageDirective } from "./zoom-image.directive";
 import { LikesComponent } from "./likes/likes.component";
+import { ObservablesComponent } from './observables/observables.component';
 
 @NgModule({
   imports:[CommonModule],
-  declarations: [TagFilterComponent, BadwordsPipe, ShortTextPipe, ZoomImageDirective, TagFilterComponent, LikesComponent],
-  exports:[TagFilterComponent, BadwordsPipe, ShortTextPipe, ZoomImageDirective, TagFilterComponent, LikesComponent]
+  declarations: [TagFilterComponent, BadwordsPipe, ShortTextPipe, ZoomImageDirective, TagFilterComponent, LikesComponent, ObservablesComponent],
+  exports:[TagFilterComponent, BadwordsPipe, ShortTextPipe, ZoomImageDirective, TagFilterComponent, LikesComponent, ObservablesComponent]
 })
 export class SharedModule {}
