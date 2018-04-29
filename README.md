@@ -1,7 +1,7 @@
 # Angular Workshop
 
 ## Step7 - Refactoring
-- CarsModule
+- ProductsModule
   - move the ProductsListComponent and ProductsItemComponent
   - import CommonModule into it
 
