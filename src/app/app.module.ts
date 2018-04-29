@@ -8,10 +8,12 @@ import { ProductsModule } from "./products/products.module";
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { DetailsComponent } from './product/details/details.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,

@@ -9,7 +9,7 @@
         <app-likes [liked]="product.liked" [likesNo]="product.likesNo" (onToggleLike)="onToggleLike($event)"></app-likes>
       </small>
       <small class="text-muted">{{product.commentsNo}} comments</small>
-      <button class="btn btn-primary">More details</button>
+      <button class="btn btn-primary" [routerLink]="[product.id]">More details</button>
     </div>
   </div>
 </div>

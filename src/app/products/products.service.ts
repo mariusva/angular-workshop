@@ -14,4 +14,8 @@ export class ProductsService {
     return this.http.get<Array<Product>>(`${this.apuURI}/products`);
   }
 
+  getProduct(productId: number):Observable<Product> {
+    return this.http.get<Product>(`${this.apuURI}/products/${productId}`);
+  }
+
 }

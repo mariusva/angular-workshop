@@ -8,10 +8,11 @@ import { ProductsListComponent } from './products-list/products-list.component';
 import { ProductItemComponent } from './product-item/product-item.component';
 import { ProductsService } from './products.service';
 import { ProductsRoutingModule } from './products-routing.module';
+import { DetailsComponent } from './details/details.component';
 
 @NgModule({
   imports: [CommonModule, HttpClientModule, SharedModule, ProductsRoutingModule],
-  declarations: [ProductsListComponent, ProductItemComponent],
+  declarations: [ProductsListComponent, ProductItemComponent, DetailsComponent],
   exports: [ProductsListComponent],
   providers: [ProductsService]
 })
