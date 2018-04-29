@@ -4,7 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
 import { SharedModule } from "./shared/shared.module";
-import { CarsModule } from "./cars/cars.module";
+import { ProductsModule } from "./products/products.module";
 
 
 import { AppComponent } from './app.component';
@@ -17,7 +17,7 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     HttpClientModule,
-    CarsModule,
+    ProductsModule,
     SharedModule,
     FormsModule
   ],

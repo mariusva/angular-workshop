@@ -11,4 +11,4 @@ import { ProductItemComponent } from './product-item/product-item.component';
   declarations: [ProductsListComponent, ProductItemComponent],
   exports: [ProductsListComponent]
 })
-export class CarsModule {}
+export class ProductsModule {}
