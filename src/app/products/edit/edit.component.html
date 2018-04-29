@@ -1,1 +1,32 @@
-<h2>Product edit: {{product.title}}</h2>
+<h2>Edit product: {{product.title}}</h2>
+<form #productForm="ngForm">
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label">Title</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="productTitle" required minlength="3" [(ngModel)]="product.title" #productTitle="ngModel">
+      <div class="alert alert-danger" *ngIf="productTitle.errors">
+        <span *ngIf="productTitle.errors.required">This field is required</span>
+        <span *ngIf="productTitle.errors.minlength">Incorrect field size</span>
+      </div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label">Price</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label">Description</label>
+    <div class="col-sm-10">
+      <textarea name="" id="" cols="30" rows="10" class="form-control"></textarea>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label">Category</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control">
+    </div>
+  </div>
+  <button class="btn btn-primary" [disabled]="!productForm.form.valid">Save</button>
+</form>
