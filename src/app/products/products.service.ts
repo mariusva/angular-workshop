@@ -3,10 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import { Product } from './product.model';
 
-
-
 @Injectable()
-export class CarsService {
+export class ProductsService {
 
   constructor(
     @Inject('API_URI') private apuURI: string,

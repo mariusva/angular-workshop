@@ -6,12 +6,13 @@ import { SharedModule } from "./../shared/shared.module";
 
 import { ProductsListComponent } from './products-list/products-list.component';
 import { ProductItemComponent } from './product-item/product-item.component';
-import { CarsService } from './cars.service';
+import { ProductsService } from './products.service';
+import { ProductsRoutingModule } from './products-routing.module';
 
 @NgModule({
-  imports: [CommonModule, HttpClientModule, SharedModule],
+  imports: [CommonModule, HttpClientModule, SharedModule, ProductsRoutingModule],
   declarations: [ProductsListComponent, ProductItemComponent],
   exports: [ProductsListComponent],
-  providers: [CarsService]
+  providers: [ProductsService]
 })
-export class CarsModule {}
+export class ProductsModule {}

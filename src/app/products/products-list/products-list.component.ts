@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 import { map } from 'rxjs/operators';
-import { CarsService } from '../cars.service';
+import { ProductsService } from '../products.service';
 
 @Component({
   selector: 'app-products-list',
@@ -15,10 +15,10 @@ export class ProductsListComponent implements OnInit {
   selectedTag: string = "";
   errorMessage: string = "";
 
-  constructor(private carsService: CarsService) { }
+  constructor(private productsService: ProductsService) { }
 
   ngOnInit() {
-    this.carsService.getProducts()
+    this.productsService.getProducts()
       .subscribe(
         data => this.products = data,
         err => this.errorMessage = err)
