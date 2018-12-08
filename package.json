@@ -21,6 +21,8 @@
     "@angular/platform-browser": "7.1.2",
     "@angular/platform-browser-dynamic": "7.1.2",
     "@angular/router": "7.1.2",
+    "@ngrx/effects": "^6.1.2",
+    "@ngrx/store": "^6.1.2",
     "angular-font-awesome": "^3.1.2",
     "core-js": "^2.4.1",
     "rxjs": "^6.3.3",
