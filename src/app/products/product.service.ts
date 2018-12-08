@@ -5,14 +5,13 @@ import { Product } from './product.model';
 
 @Injectable()
 export class ProductService {
-  constuctor(
-    private http: HttpClient,
-    @Inject() private API_URI
-  ) {
-    debugger;
-  }
+
+    constructor(
+      private http: HttpClient,
+      @Inject('API_URI') private apiURI
+    ) {}
 
     getProducts(): Observable<Product[]> {
-      return this.http.get();
+      return this.http.get<Product[]>(`${this.apiURI}/products`);
     }
 }
