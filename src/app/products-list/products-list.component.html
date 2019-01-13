@@ -1,6 +1,6 @@
 <div class="row">
   <div *ngFor="let product of products; let i=index" class="col-md-4">
-    <div *ngIf="i < 2" class="card mb-4 box-shadow">
+    <div *ngIf="true" class="card mb-4 box-shadow">
       <img class="card-img-top" [src]="product.imageSrc">
         <div class="card-body">
           <h5>{{i + 1}}. {{product.title}}</h5>
