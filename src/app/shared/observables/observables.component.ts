@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable, Subscribable } from 'rxjs/Observable';
-import { fromEvent } from 'rxjs/observable/fromEvent';
-import { ajax } from 'rxjs/observable/dom/ajax';
+import { Observable, Subscribable, fromEvent } from 'rxjs';
+// import { ajax } from 'rxjs/observable/dom/ajax';
 import { map, filter, debounceTime, distinctUntilChanged, switchMap, skip } from 'rxjs/operators';
 
 @Component({
@@ -26,7 +25,7 @@ export class ObservablesComponent implements OnInit {
       // switchMap(term => ajax(`http://localhost:3000/products?category=${term}`))
     );
 
-    this.typeahead.subscribe(data => console.log(data))
+    this.typeahead.subscribe(data => console.log(data));
   }
 
 }
