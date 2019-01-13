@@ -8,7 +8,15 @@ import { Product } from "./../product.model";
 })
 export class TagFilterComponent implements OnChanges {
 
-  @Input() products: Product[] = [];
+  @Input()
+  set products(products: Product[]) {
+    products.forEach(product => {
+      if (!this.tags.includes(product.category)) {
+        this.tags.push(product.category);
+      }
+    });
+  }
+
   @Output() tagSelected: EventEmitter<string> = new EventEmitter();
 
   tags: string[] = [];
@@ -17,11 +25,11 @@ export class TagFilterComponent implements OnChanges {
   constructor() { }
 
   ngOnChanges() {
-    this.products.forEach(product => {
-      if(!this.tags.includes(product.category)) {
-        this.tags.push(product.category);
-      }
-    })
+    // this.products.forEach(product => {
+    //   if(!this.tags.includes(product.category)) {
+    //     this.tags.push(product.category);
+    //   }
+    // })
   }
 
   onSelectTag(tag: string) {
