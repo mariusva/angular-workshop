@@ -6,7 +6,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --prod",
-    "test": "ng test",
+    "test:dev": "ng test --karma-config test/karma-dev.conf.js --source-map=false",
+    "test:prod": "ng test --karma-config test/karma-prod.conf.js",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
@@ -42,7 +43,9 @@
     "karma-coverage-istanbul-reporter": "^1.2.1",
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
+    "karma-junit-reporter": "^1.2.0",
     "protractor": "~5.1.2",
+    "puppeteer": "^1.11.0",
     "ts-node": "~4.1.0",
     "tslint": "~5.9.1",
     "typescript": "3.2.2"

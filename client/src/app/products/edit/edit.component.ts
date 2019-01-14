@@ -16,7 +16,10 @@ export class EditComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.route.data.subscribe(data => this.product = data.product);
+    this.route.data.subscribe(data => {
+      console.log(data);
+      this.product = data.product;
+    });
   }
 
 }
