@@ -20,7 +20,9 @@ export class DetailsComponent implements OnInit {
   ngOnInit() {
     this.route.paramMap
       .pipe(
-        switchMap((params: ParamMap) => this.productsService.getProduct(+params.get('id')))
+        switchMap((params: ParamMap) => {
+          return this.productsService.getProduct(+params.get('id'));
+        })
       )
       .subscribe((product: Product) => this.product = product);
   }

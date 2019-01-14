@@ -1,6 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { EditComponent } from './edit.component';
+import { FormsModule } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
+import { ActivatedRouteStub } from '../../../../test/helpers/mocks/services/activated-route-stub.service';
 
 describe('EditComponent', () => {
   let component: EditComponent;
@@ -8,7 +11,11 @@ describe('EditComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ EditComponent ]
+      imports: [FormsModule],
+      declarations: [ EditComponent ],
+      providers: [
+        { provide: ActivatedRoute, useClass: ActivatedRouteStub }
+      ]
     })
     .compileComponents();
   }));
