@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve -o",
     "build": "ng build --prod",
     "test:dev": "ng test --karma-config test/karma-dev.conf.js --source-map=false",
     "test:prod": "ng test --karma-config test/karma-prod.conf.js",
