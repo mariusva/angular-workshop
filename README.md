@@ -12,5 +12,5 @@
   - add short-text.pipe
   - add zoom-image directive
 
-- import the SharedModule into CarsModule
+- import the SharedModule into ProductsModule
 - import all the needed dependencies into AppModule
