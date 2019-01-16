@@ -1,4 +1,4 @@
-this.products = [{
+export const products = [{
   "id": 1400,
   "title": "Product title",
   "price": 150,
