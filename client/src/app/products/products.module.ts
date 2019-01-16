@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { SharedModule } from "./../shared/shared.module";
 
@@ -14,7 +15,7 @@ import { CanActivateEditGuard } from './can-activate-edit.guard';
 import { ProductsEditResolver } from "./products-edit.resolver";
 
 @NgModule({
-  imports: [CommonModule, HttpClientModule, SharedModule, ProductsRoutingModule],
+  imports: [CommonModule, HttpClientModule, ReactiveFormsModule, SharedModule, ProductsRoutingModule],
   declarations: [ProductsListComponent, ProductItemComponent, DetailsComponent, EditComponent],
   exports: [ProductsListComponent],
   providers: [ProductsService, CanActivateEditGuard, ProductsEditResolver]
