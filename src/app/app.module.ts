@@ -17,6 +17,7 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     HttpClientModule,
+    SharedModule,
     ProductsModule,
     FormsModule
   ],
