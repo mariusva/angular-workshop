@@ -3,21 +3,25 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
-import { ProductsModule } from './products/products.module';
-
 import { AppComponent } from './app.component';
+import { NavComponent } from './nav/nav.component';
+import { AppRoutingModule } from './app-routing.module';
+import { HomeComponent } from './home/home.component';
+import { CanActivateProducts } from './products/guards/can-activate-products.guard';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    FormsModule,
-    ProductsModule
+    AppRoutingModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [CanActivateProducts],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

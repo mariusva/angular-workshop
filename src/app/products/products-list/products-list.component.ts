@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
   selector: 'app-products-list',
@@ -8,10 +9,22 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ProductsListComponent implements OnInit {
 
+  constructor(
+    public route: ActivatedRoute
+  ) {}
+
   products = [];
   selectedTag: string = "";
 
   ngOnInit() {
+    this.route.queryParamMap.subscribe(
+      data => console.log(data)
+    );
+    this.route.paramMap
+      .subscribe((paramsMap: ParamMap) => {
+        console.log(paramsMap.get('name'));
+      });
+
     this.products = [{
       id: 1400,
       title: 'Product title',
