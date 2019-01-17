@@ -1,11 +1,11 @@
-import { NgModule } from "@angular/core";
-import { CommonModule } from "@angular/common";
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
-import { TagFilterComponent } from "./tag-filter/tag-filter.component";
+import { TagFilterComponent } from './tag-filter/tag-filter.component';
 import { BadwordsPipe } from './badwords.pipe';
-import { ShortTextPipe } from "./short-text.pipe";
-import { ZoomImageDirective } from "./zoom-image.directive";
-import { LikesComponent } from "./likes/likes.component";
+import { ShortTextPipe } from './short-text.pipe';
+import { ZoomImageDirective } from './zoom-image.directive';
+import { LikesComponent } from './likes/likes.component';
 
 @NgModule({
   imports:[CommonModule],
