@@ -1,5 +1,5 @@
 import { Component, Input, OnChanges, Output, EventEmitter } from '@angular/core';
-import { Product } from "./../product.model";
+import { Product } from './../product.model';
 
 @Component({
   selector: 'app-tag-filter',
