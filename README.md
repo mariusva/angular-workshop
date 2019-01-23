@@ -1,4 +1,7 @@
 # Angular Workshop
 
-## Step12 - Product edit resolver
-- Add a resolver for product edit route
+## Step13 - Reactive forms
+Start the project using ```npm start```
+
+* created the reactive forms with FormBuilder
+* used the minLength validator for price
