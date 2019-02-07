@@ -17,6 +17,8 @@ import { StoreModule } from '@ngrx/store';
 import { reducer } from './store/reducer/products.reducer';
 import { EffectsModule } from '@ngrx/effects';
 import { ProductsEffects } from './store/effects/products.effects';
+import { AddComponent } from './add/add.component';
+import { AddFormComponent } from './add-form/add-form.component';
 
 @NgModule({
   imports: [
@@ -28,7 +30,7 @@ import { ProductsEffects } from './store/effects/products.effects';
     StoreModule.forFeature('products_state', reducer),
     EffectsModule.forFeature([ProductsEffects])
   ],
-  declarations: [ProductsListComponent, ProductItemComponent, DetailsComponent, EditComponent],
+  declarations: [ProductsListComponent, ProductItemComponent, DetailsComponent, EditComponent, AddComponent, AddFormComponent],
   exports: [ProductsListComponent],
   providers: [ProductsService, CanActivateEditGuard, ProductsEditResolver]
 })

@@ -18,7 +18,7 @@ export class ProductsEditResolver implements Resolve<Product> {
     state: RouterStateSnapshot
   ): Observable<any> | Promise<any> | any {
 
-    let id = +route.paramMap.get('id');
+    const id = +route.paramMap.get('id');
     this.productsService.getProduct(id);
 
     return this.productsService.product$

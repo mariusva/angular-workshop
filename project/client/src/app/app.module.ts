@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { reducers } from './app.state';
+import { AddFormComponent } from './products/add-form/add-form.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { reducers } from './app.state';
     StoreModule.forRoot(reducers),
     EffectsModule.forRoot([]),
   ],
+  entryComponents: [AddFormComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
