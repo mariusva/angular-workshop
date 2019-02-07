@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" *ngIf="(productsSerivce.products$ | async) as products">
   <div class="w-100">
     <div class="alert alert-danger" *ngIf="errorMessage">Something serious happened on our other end :-(</div>
     <div class="col" *ngIf="!errorMessage">
@@ -9,3 +9,5 @@
     <app-product-item *ngIf="selectedTag === product.category || selectedTag === ''" [product]="product"></app-product-item>
   </ng-container>
 </div>
+
+<button (click)="addProductClickHandler()">Add product</button>

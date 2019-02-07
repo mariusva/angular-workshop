@@ -13,9 +13,21 @@ import { DetailsComponent } from './details/details.component';
 import { EditComponent } from './edit/edit.component';
 import { CanActivateEditGuard } from './can-activate-edit.guard';
 import { ProductsEditResolver } from "./products-edit.resolver";
+import { StoreModule } from '@ngrx/store';
+import { reducer } from './store/reducer/products.reducer';
+import { EffectsModule } from '@ngrx/effects';
+import { ProductsEffects } from './store/effects/products.effects';
 
 @NgModule({
-  imports: [CommonModule, HttpClientModule, FormsModule, SharedModule, ProductsRoutingModule],
+  imports: [
+    CommonModule,
+    HttpClientModule,
+    FormsModule,
+    SharedModule,
+    ProductsRoutingModule,
+    StoreModule.forFeature('products_state', reducer),
+    EffectsModule.forFeature([ProductsEffects])
+  ],
   declarations: [ProductsListComponent, ProductItemComponent, DetailsComponent, EditComponent],
   exports: [ProductsListComponent],
   providers: [ProductsService, CanActivateEditGuard, ProductsEditResolver]

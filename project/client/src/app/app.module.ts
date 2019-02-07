@@ -8,6 +8,9 @@ import { ProductsModule } from "./products/products.module";
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { reducers } from './app.state';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,9 @@ import { AppRoutingModule } from './app-routing.module';
     FormsModule,
     SharedModule,
     ProductsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    StoreModule.forRoot(reducers),
+    EffectsModule.forRoot([]),
   ],
   providers: [],
   bootstrap: [AppComponent]
