@@ -30,8 +30,8 @@ export class ProductsEffects {
   loadProduct$: Observable<Action> = this.actions$
     .pipe(
       ofType(actions.LOAD_PRODUCT),
-      switchMap((id) => {
-        return this.productsService.getProduct(id)
+      switchMap(({ payload }) => {
+        return this.productsService.getProduct(payload)
           .pipe(
             map(product => new actions.LoadProductCompletedWithSuccess(product)),
             catchError(err => of(new actions.LoadProductCompletedWithError(err)))

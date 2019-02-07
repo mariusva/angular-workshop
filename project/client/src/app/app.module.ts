@@ -12,6 +12,8 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { reducers } from './app.state';
 import { AddFormComponent } from './products/add-form/add-form.component';
+import { environment } from '../environments/environment';
+import {StoreDevtoolsModule} from '@ngrx/store-devtools';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,7 @@ import { AddFormComponent } from './products/add-form/add-form.component';
     AppRoutingModule,
     StoreModule.forRoot(reducers),
     EffectsModule.forRoot([]),
+    StoreDevtoolsModule.instrument()
   ],
   entryComponents: [AddFormComponent],
   providers: [],

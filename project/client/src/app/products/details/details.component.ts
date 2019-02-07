@@ -3,6 +3,7 @@ import { ProductsService } from '../../products/products.service';
 import { Product } from '../../products/product.model';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { switchMap, map } from "rxjs/operators";
+import { ProductsStoreService } from '../store/products.service';
 
 @Component({
   selector: 'app-details',
@@ -14,17 +15,10 @@ export class DetailsComponent implements OnInit {
   product: Product;
 
   constructor(
-    private productsService: ProductsService,
+    public productsService: ProductsStoreService,
     private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.route.paramMap
-      .pipe(
-        switchMap((params: ParamMap) => {
-          return this.productsService.getProduct(+params.get('id'));
-        })
-      )
-      .subscribe((product: Product) => this.product = product);
+    this.productsService.getProduct(this.route.snapshot.params.id);
   }
-
 }

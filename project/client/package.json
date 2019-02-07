@@ -26,6 +26,7 @@
     "@ngrx/core": "^1.2.0",
     "@ngrx/effects": "^7.2.0",
     "@ngrx/store": "^7.2.0",
+    "@ngrx/store-devtools": "^7.2.0",
     "angular-font-awesome": "^3.1.2",
     "core-js": "^2.4.1",
     "rxjs": "^6.3.3",

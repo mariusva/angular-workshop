@@ -1,4 +1,4 @@
-import { map, distinctUntilChanged } from 'rxjs/operators';
+import { map, distinctUntilChanged, filter } from 'rxjs/operators';
 import { ProductsState } from '../modles/products.models';
 
 export function getProductsState() {
@@ -13,7 +13,8 @@ export function getProducts() {
   return state$ => state$
     .pipe(
       getProductsState(),
-      map((state: ProductsState) => state.products)
+      map((state: ProductsState) => state.products),
+      distinctUntilChanged()
     );
 }
 
@@ -21,6 +22,8 @@ export function getProduct() {
   return state$ => state$
     .pipe(
       getProductsState(),
-      map((state: ProductsState) => state.selectedProduct)
+      map((state: ProductsState) => state.selectedProduct),
+      filter(product => !!product),
+      distinctUntilChanged()
     );
 }
