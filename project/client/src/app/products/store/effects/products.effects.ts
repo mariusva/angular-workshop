@@ -26,5 +26,18 @@ export class ProductsEffects {
       })
     );
 
+  @Effect()
+  loadProduct$: Observable<Action> = this.actions$
+    .pipe(
+      ofType(actions.LOAD_PRODUCT),
+      switchMap((id) => {
+        return this.productsService.getProduct(id)
+          .pipe(
+            map(product => new actions.LoadProductCompletedWithSuccess(product)),
+            catchError(err => of(new actions.LoadProductCompletedWithError(err)))
+          );
+      })
+    );
+
   constructor(private actions$: Actions, private productsService: ProductsService) { }
 }

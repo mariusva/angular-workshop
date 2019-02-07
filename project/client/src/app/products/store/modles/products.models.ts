@@ -2,6 +2,7 @@ export interface ProductsState {
   isLoading: boolean;
   error: any;
   products: Array<IProduct>;
+  selectedProduct: IProduct;
 }
 
 export interface IProduct {

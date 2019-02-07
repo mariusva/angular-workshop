@@ -16,3 +16,11 @@ export function getProducts() {
       map((state: ProductsState) => state.products)
     );
 }
+
+export function getProduct() {
+  return state$ => state$
+    .pipe(
+      getProductsState(),
+      map((state: ProductsState) => state.selectedProduct)
+    );
+}

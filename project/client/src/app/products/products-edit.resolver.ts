@@ -6,11 +6,12 @@ import { Product } from "./product.model";
 import { ProductsService } from "./products.service";
 
 import { take, map, catchError } from 'rxjs/operators';
+import { ProductsStoreService } from './store/products.service';
 
 @Injectable()
 export class ProductsEditResolver implements Resolve<Product> {
 
-  constructor(private productsService: ProductsService, private router: Router) {}
+  constructor(private productsService: ProductsStoreService, private router: Router) {}
 
   resolve(
     route: ActivatedRouteSnapshot,
@@ -18,8 +19,9 @@ export class ProductsEditResolver implements Resolve<Product> {
   ): Observable<any> | Promise<any> | any {
 
     let id = +route.paramMap.get('id');
+    this.productsService.getProduct(id);
 
-    return this.productsService.getProduct(id)
+    return this.productsService.product$
       .pipe(
         take(1),
         map(product => {
