@@ -7,7 +7,16 @@ import { AddFormComponent } from '../add-form/add-form.component';
   styleUrls: ['./add.component.css']
 })
 export class AddComponent {
-  @ViewChild('container', { read: ViewContainerRef }) viewContainerRef: ViewContainerRef;
+  private _viewContainerRef: ViewContainerRef = null;
+
+  @ViewChild('container', { read: ViewContainerRef }) 
+  set viewContainerRef (viewContainerRef: ViewContainerRef) {
+    this._viewContainerRef = viewContainerRef;
+  }
+
+  get viewContainerRef(): ViewContainerRef {
+    return this._viewContainerRef;
+  }
 
   private componentRef: ComponentRef<AddFormComponent>;
 
